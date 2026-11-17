@@ -1,0 +1,176 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d16;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #171126, #32135a);
+  padding: 35px 20px;
+  text-align: center;
+  border-bottom: 1px solid #7439c6;
+}
+
+header h1 {
+  color: #b68cff;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+header p {
+  color: #c7bed8;
+  font-size: 15px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.busca {
+  margin-bottom: 25px;
+}
+
+#pesquisa {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #58318e;
+  border-radius: 12px;
+  background: #1a1728;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+#pesquisa:focus {
+  border-color: #ad79ff;
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.categorias button {
+  padding: 12px 20px;
+  background: #241a39;
+  color: #e7dcfa;
+  border: 1px solid #513477;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.categorias button:hover,
+.categorias button.ativo {
+  background: #7c3aed;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.card-produto {
+  background: #1b1729;
+  border: 1px solid #392750;
+  border-radius: 16px;
+  padding: 18px;
+  transition: 0.2s;
+}
+
+.card-produto:hover {
+  transform: translateY(-4px);
+  border-color: #9154e8;
+}
+
+.card-produto img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-produto h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.card-produto p {
+  color: #bcaed3;
+  margin-bottom: 15px;
+}
+
+.card-produto a {
+  display: block;
+  text-align: center;
+  padding: 13px;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.card-produto a:hover {
+  background: #9458f5;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 60px;
+  color: #a59bb6;
+  border-top: 1px solid #30233f;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 27px;
+  }
+
+  main {
+    margin-top: 25px;
+  }
+
+  .grade-produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .card-produto {
+    padding: 10px;
+  }
+
+  .card-produto img {
+    height: 130px;
+  }
+
+  .card-produto h3 {
+    font-size: 14px;
+  }
+}
